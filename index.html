@@ -514,9 +514,9 @@
         <p class="name-title">and I'm a Frontend<br />Developer</p>
       </div>
 
-      <a href="#" class="view-more-btn" onclick="navigateToPortfolio(event)">
+      <button class="view-more-btn" onclick="navigateToPortfolio()">
         View More
-      </a>
+      </button>
     </div>
 
     <!-- Social links (subtle) -->
@@ -555,10 +555,8 @@
         }, 100);
       });
 
-      // Navigate to portfolio with smooth transition
-      function navigateToPortfolio(event) {
-        event.preventDefault();
-
+      // Navigate to portfolio with smooth transition - FIXED VERSION
+      function navigateToPortfolio() {
         const loadingOverlay = document.querySelector(".loading-overlay");
         const pageTransition = document.querySelector(".page-transition");
 
@@ -570,10 +568,46 @@
           pageTransition.classList.add("fade-out");
         }, 200);
 
-        // Navigate to portfolio after animation
+        // Try multiple possible URLs for GitHub Pages compatibility
         setTimeout(() => {
-          // Replace 'portfolio.html' with your actual portfolio file name
-          window.location.href = "home.html";
+          // First, try the direct path
+          const currentPath = window.location.pathname;
+          const basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
+          
+          // Different possible paths to try
+          const possiblePaths = [
+            basePath + 'home.html',
+            './home.html',
+            'home.html',
+            basePath + 'home',
+            './home',
+            'home'
+          ];
+
+          // Function to try each path
+          function tryPath(index) {
+            if (index >= possiblePaths.length) {
+              // If all paths fail, show an error or fallback
+              console.error('Could not find home page');
+              loadingOverlay.classList.remove("active");
+              pageTransition.classList.remove("fade-out");
+              alert('Navigation failed. Please check if home.html exists in the same directory.');
+              return;
+            }
+
+            const path = possiblePaths[index];
+            
+            // Try to navigate to the path
+            try {
+              window.location.href = path;
+            } catch (error) {
+              console.log(`Failed to navigate to ${path}, trying next...`);
+              tryPath(index + 1);
+            }
+          }
+
+          // Start trying paths
+          tryPath(0);
         }, 1500);
       }
 
@@ -683,6 +717,11 @@
             }
         `;
       document.head.appendChild(style);
+
+      // Debug information
+      console.log('Current URL:', window.location.href);
+      console.log('Current pathname:', window.location.pathname);
+      console.log('Base URL:', window.location.origin);
     </script>
   </body>
 </html>
