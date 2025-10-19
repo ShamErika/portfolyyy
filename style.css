@@ -1151,10 +1151,12 @@
 }
 
 .skill-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .skill-name {
