@@ -42,7 +42,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #96A78D, #B6CEB4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -66,7 +66,7 @@
         }
 
         .cta-btn {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg,  #96A78D, #B6CEB4);
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
@@ -138,14 +138,14 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg,  #96A78D, #B6CEB4);
             color: white;
         }
 
         .btn-secondary {
             background: transparent;
-            color: #6366f1;
-            border: 2px solid #6366f1;
+            color: #96A78D;
+            border: 2px solid #B6CEB4;
         }
 
         .btn-primary:hover, .btn-secondary:hover {
@@ -169,7 +169,7 @@
             width: 300px;
             height: 300px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #96A78D, #B6CEB4);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -199,7 +199,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
             border-radius: 50%;
             animation: floatAround 8s linear infinite;
         }
@@ -276,7 +276,7 @@
     width: 350px;
     height: 350px;
     border-radius: 20px;
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    background: linear-gradient(135deg, #96A78D, #B6CEB4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -412,7 +412,7 @@
         }
 
         .skill-item:hover {
-            background: #6366f1;
+            background: #96A78D;
             color: white;
             transform: translateY(-3px);
         }
@@ -452,7 +452,7 @@
 
         .filter-btn:hover,
         .filter-btn.active {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #96A78D, #B6CEB4);
             color: white;
             border-color: transparent;
             transform: translateY(-2px);
@@ -606,7 +606,7 @@
         }
 
         .project-impact {
-            background: linear-gradient(135deg, #10b981, #059669);
+            background: linear-gradient(135deg, #96A78D, #B6CEB4);
             color: white;
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
@@ -719,7 +719,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #96A78D, #B6CEB4);
             color: white;
             border-radius: 15px;
         }
@@ -811,7 +811,7 @@
             right: 2rem;
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            background: linear-gradient(135deg, #96A78D, #B6CEB4);
             color: white;
             border-radius: 50%;
             display: flex;
@@ -976,7 +976,7 @@
 }
 
 .education-icon {
-    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    background: linear-gradient(135deg, #96A78D, #B6CEB4);
     border-radius: 15px;
     width: 80px;
     height: 80px;
